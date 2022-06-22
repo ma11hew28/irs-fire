@@ -1,0 +1,94 @@
+- Refactor
+  - Use enums/structs/etc to organize code
+    enum Record<'a> {
+        T(RecordT<'a>),
+        A(RecordA<'a>),
+        B(RecordB<'a>),
+        C(RecordC<'a>),
+        K(RecordK<'a>),
+        F(RecordF<'a>),
+    }
+    struct RecordT<'a> {
+        payment_year: &'a str,
+    }
+    struct RecordA<'a> {
+        payment_year: &'a str,
+    }
+    struct RecordB<'a> {
+        payment_year: &'a str,
+    }
+    struct RecordC<'a> {
+        payment_year: &'a str,
+    }
+    struct RecordK<'a> {
+        payment_year: &'a str,
+    }
+    struct RecordF<'a> {
+        payment_year: &'a str,
+    }
+    - Loop through objects and create an array of records (enums)
+      - Add all fields of Runner except for output_file to records
+      - Add C, K, and F Records to array
+  - Use structs for Transmitter, Company, Contact, Address, etc
+  - Pull out duplicate code into functions
+  - Modify strings instead of making copies
+    - Ie, use make_ascii_uppercase instead of to_ascii_uppercase
+  - Use numbers and booleans (not just strings) as values in JSON input file
+- Validate all fields before creating output file
+  - Validate that:
+    fn validate_objects(objects: &JsonValue) {
+        // - objects has at least three records
+        assert!(objects.members().count() >= 3);
+        // - first object represents a T Record
+        let members = objects.members();
+        let object_1 = members.next();
+        assert_eq!(object_1["recordType"].as_str().unwrap(), "T");
+        // - there isn't another object that represents a T Record
+        // - the second object represents an A Record
+        // - at least one B Record follows every A Record
+        // - the output file will have at most 1,000,000 records (or 0.75 GB)
+    }
+    - cfsfNumber exists if and only if isCfsfProgram
+    - accountNumber exists if more than one B Record exists for the same A
+      Record and payee
+    - there aren't separate A Records for each payment amount
+    - totals don't overflow when adding amounts
+  - Validate T Record fields
+    let alphanumeric_re = Regex::new(r"^[0-9A-Z]*$").unwrap();
+    let ascii_re = Regex::new(r"^[[:ascii:]]*$").unwrap();
+    assert_eq!(payment_year.len(), 4);
+    assert!(payment_year.chars().all(|c| c.is_ascii_digit()));
+    assert!(matches!(is_prior_year, "P" | " "));
+    assert_eq!(transmitter_tin.len(), 9);
+    assert!(transmitter_tin.chars().all(|c| c.is_ascii_digit()));
+    assert_eq!(transmitter_control_code.len(), 5);
+    assert!(alphanumeric_re.is_match(transmitter_control_code));
+    assert!(transmitter_control_code.chars().all(|c| matches!(c, '0'..='9' | 'A'..='Z'));
+    assert!(matches!(is_test_file, "T" | " "));
+    assert!(matches!(is_foreign_entity, "1" | " "));
+    assert!(matches!(transmitter_name.len(), 1..=40));
+    assert!(ascii_re.is_match(transmitter_name));
+    assert!(transmitter_name_2.len() <= 40);
+    assert!(ascii_re.is_match(transmitter_name_2));
+    assert!(matches!(company_name.len(), 1..=40));
+    assert!(ascii_re.is_match(company_name));
+    assert!(company_name_2.len() <= 40);
+    assert!(ascii_re.is_match(company_name_2));
+    assert!(matches!(company_mailing_address.len(), 1..=40));
+    assert!(ascii_re.is_match(company_mailing_address));
+    assert!(matches!(company_city.len(), 1..=40));
+    assert!(ascii_re.is_match(company_city));
+    assert_eq!(company_state.len(), 2);
+    assert!(company_state.chars().all(|c| c.is_ascii_uppercase()));
+    assert!(matches!(company_zip_code.len(), 5 | 9));
+    assert!(company_zip_code.chars().all(|c| c.is_ascii_digit()));
+    assert!(matches!(contact_name.len(), 1..=40));
+    assert!(ascii_re.is_match(contact_name));
+    assert!(matches!(contact_phone.len(), 1..=15));
+    assert!(contact_phone.chars().all(|c| c.is_ascii_digit()));
+    assert!(contact_email.len() <= 50);
+    assert!(ascii_re.is_match(contact_email));
+  - Make functions for validating fields
+- Add better error handling
+  - At least provide helpful error messages
+- Write unit tests and integration tests

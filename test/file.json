@@ -1,0 +1,253 @@
+[
+  {
+    "recordType": "T",
+    "paymentYear": 2021,
+    "transmitter": {
+      "tin": "123456789",
+      "controlCode": "12AB3",
+      "name": "Kimberly Ramsey"
+    },
+    "isTestFile": "T",
+    "company": {
+      "name": "Kimberly Ramsey",
+      "address": {
+        "street": "89 Forbes Cir",
+        "city": "Hamden",
+        "state": "CT",
+        "zip": "065142388"
+      }
+    },
+    "contact": {
+      "name": "Kimberly Ramsey",
+      "phone": "2032881234",
+      "email": "kimberly.ramsey.8394@gmail.com"
+    }
+  },
+  {
+    "recordType": "A",
+    "isCfsfProgram": "1",
+    "issuer": {
+      "tin": "911144442",
+      "nameControl": "SHOD",
+      "name": "Shodeck Inc",
+      "address": {
+        "street": "2591 Reynolds Aly",
+        "city": "Norwich",
+        "state": "CT",
+        "zip": "063607353"
+      },
+      "phone": "860253678512345"
+    },
+    "isLastFiling": "1",
+    "amountCodes": "D"
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "HARD",
+      "tinType": "2",
+      "tin": "576515534",
+      "name": "Jerome Neil Hardy",
+      "address": {
+        "street": "1756 Marietta St",
+        "city": "East Haven",
+        "state": "CT",
+        "zip": "065123856"
+      }
+    },
+    "paymentAmounts": {
+      "d": 347121
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "TEAK",
+      "tinType": "2",
+      "tin": "387317097",
+      "name": "Franklin Kevin Teak",
+      "address": {
+        "street": "309 Harley Vincent Dr",
+        "city": "Vernon",
+        "state": "CT",
+        "zip": "06066"
+      }
+    },
+    "paymentAmounts": {
+      "d": 275341
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "BILL",
+      "tinType": "2",
+      "tin": "486866124",
+      "name": "Lou Sandy Billings",
+      "address": {
+        "street": "209 Byrd Ln",
+        "city": "Waterbury",
+        "state": "CT",
+        "zip": "06708"
+      }
+    },
+    "paymentAmounts": {
+      "d": 238423
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "MCCE",
+      "tinType": "2",
+      "tin": "585308248",
+      "name": "Wade John McCedar",
+      "address": {
+        "street": "4524 Apple Trl",
+        "city": "Milford",
+        "state": "CT",
+        "zip": "06461"
+      }
+    },
+    "paymentAmounts": {
+      "d": 398436
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "CEDA",
+      "tinType": "2",
+      "tin": "517765928",
+      "name": "Amy Carol Cedar-Hawthorn",
+      "address": {
+        "street": "2036 Johnny Pkwy",
+        "city": "Norwalk",
+        "state": "CT",
+        "zip": "068505543"
+      }
+    },
+    "paymentAmounts": {
+      "d": 136046
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "LU",
+      "tinType": "2",
+      "tin": "160030835",
+      "name": "Mildred Louise Lu-Willow",
+      "address": {
+        "street": "2231 Skips Blvd",
+        "city": "Fairfield",
+        "state": "CT",
+        "zip": "06828"
+      }
+    },
+    "paymentAmounts": {
+      "d": 537367
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "ASH",
+      "tinType": "2",
+      "tin": "416273369",
+      "name": "Evonne Tiffany Ash",
+      "address": {
+        "street": "4610 Coventry Ct",
+        "city": "Wilton",
+        "state": "CT",
+        "zip": "06897"
+      }
+    },
+    "paymentAmounts": {
+      "d": 927196
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "DAVI",
+      "tinType": "2",
+      "tin": "531476268",
+      "name": "Raul Dean Davis",
+      "address": {
+        "street": "4517 Hazelwood Ave",
+        "city": "New Haven",
+        "state": "CT",
+        "zip": "06513"
+      }
+    },
+    "paymentAmounts": {
+      "d": 648453
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "DIFI",
+      "tinType": "2",
+      "tin": "502580688",
+      "name": "Jay Nelson Di Fiore",
+      "address": {
+        "street": "728 Geneva Ctr",
+        "city": "Hartford",
+        "state": "CT",
+        "zip": "06105"
+      }
+    },
+    "paymentAmounts": {
+      "d": 295437
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "LO",
+      "tinType": "2",
+      "tin": "002284161",
+      "name": "Carolee Gina Lo",
+      "address": {
+        "street": "2149 Fleming Way",
+        "city": "Greenwich",
+        "state": "CT",
+        "zip": "06831"
+      }
+    },
+    "paymentAmounts": {
+      "d": 712426
+    },
+    "cfsfNumber": 8
+  },
+  {
+    "recordType": "B",
+    "payee": {
+      "nameControl": "MONT",
+      "tinType": "2",
+      "tin": "253498801",
+      "name": "Robin Minerva Montes",
+      "address": {
+        "street": "2263 Seth Tpke",
+        "city": "Newington",
+        "state": "CT",
+        "zip": "06111"
+      }
+    },
+    "paymentAmounts": {
+      "d": 144038
+    },
+    "cfsfNumber": 8
+  }
+]
